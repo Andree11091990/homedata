@@ -1,0 +1,17 @@
+ internal static class ReverseArray 
+{ 
+    private static void Main(string[] args) 
+    { 
+        int[] num = [1, 2, 5, 0, 10, 34]; 
+        ReverseArray.Reverse(num, num.Length - 1); 
+    }
+    public static void Reverse(T[] array, int count) 
+    { 
+        if (count > 0) 
+        { 
+            Console.WriteLine(array[count]); 
+            Reverse(array, count - 1); 
+        } 
+        else { Console.WriteLine(array[0]); } 
+    } 
+} 
